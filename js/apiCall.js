@@ -5,9 +5,9 @@ function nameDistanceCall () {
   console.log(`Calling API with Name: ${name}, keyboard: ${keyboard}`);
   axios.get(`https://namedistance.onrender.com/dist/${keyboard}&${name}`)
   .then(function (response) {
-      console.log('API success')
+      // console.log('API success')
       let info = response.data.data
-      console.log(info);
+      // console.log(info);
       showResults(info)
     })
     .catch(function (error) {
@@ -15,7 +15,7 @@ function nameDistanceCall () {
       console.log(error);
     })
     .finally(function () {
-      console.log('function end')
+      // console.log('function end')
     });
 }
 
