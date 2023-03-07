@@ -2,7 +2,7 @@ function nameDistanceCall () {
   event.preventDefault()
   let name = document.getElementById("inputName").value;
   let keyboard = document.getElementById("keyboard").value;
-  console.log(`Calling API with Name: ${name}, keyboard: ${keyboard}`);
+  // console.log(`Calling API with Name: ${name}, keyboard: ${keyboard}`);
   axios.get(`https://namedistance.onrender.com/dist/${keyboard}&${name}`)
   .then(function (response) {
       // console.log('API success')
