@@ -1,14 +1,23 @@
-function nameDistanceCall () {
+function nameDistanceCall (event) {
   event.preventDefault()
   let name = document.getElementById("inputName").value;
   let keyboard = document.getElementById("keyboard").value;
+
+  // Disable api button until results found 
+  let apiButton = document.getElementById("apiCall")
+  apiButton.disabled = true ;
+
+  // Start Progress Spinner while API is being called
+  let spinner = document.getElementById("showSpinner");
+  spinner.style = "visibility: visible;"
+
   // console.log(`Calling API with Name: ${name}, keyboard: ${keyboard}`);
   axios.get(`https://namedistance.onrender.com/dist/${keyboard}&${name}`)
   .then(function (response) {
-      // console.log('API success')
       let info = response.data.data
-      // console.log(info);
-      showResults(info)
+      apiButton.disabled = false; // Enable button once results found
+      spinner.style = "visibility: hidden;"
+      showResults(info, keyboard, name)
     })
     .catch(function (error) {
       // handle error
@@ -19,11 +28,19 @@ function nameDistanceCall () {
     });
 }
 
-function showResults(info) {
-  // Destroy previous box
+function showResults(info, keyboard, name) {
+  // Remove Previous information
   const table = document.getElementById("table")
   table.innerHTML = " "
-  
+  const keyboardType = document.getElementById("keyboardType");
+  keyboardType.innerHTML = "Keyboard Type: "
+  const nameSearched = document.getElementById("nameSearch")
+  nameSearched.innerHTML = "Name Searched: "
+
+  // Update Keyboard and Name Search Info
+  keyboardType.innerHTML += `${keyboard}`
+  nameSearched.innerHTML += `${name}`
+
   // Create Box Headers
 
   let thead = table.createTHead()
