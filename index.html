@@ -22,7 +22,7 @@
 </head>
 <body>
     <h3>Name Distance Tech Demo</h3>
-    <form className = "searchBar">
+    <form className = "searchBar" onsubmit="return false">
         <label for="input name">Enter a Name</label>
         <input type = "text" id = "inputName" name = "inputName" placeholder="George"  />
         <br>
@@ -33,8 +33,20 @@
         </select>
         <br>
     </form>
-    <button type = "button" onclick = "nameDistanceCall()">apiCall</button>
+    <button type = "button" id = "apiCall" onclick = "nameDistanceCall(event)">
+        apiCall
+    </button>
+    <div id = "showSpinner" style = "visibility:hidden;">
+        <div class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
     <div>Results here:</div>
+        <div class = "container" id = "testType">
+            <div class = "keyboardType" id = "keyboardType"> Keyboard Type: </div>
+            <div class = "nameSearch" id = "nameSearch">Name Searched: </div>
+        </div>
         <div class = "container" id = "results">
             <table class = "table table-striped" id = "table">
 
