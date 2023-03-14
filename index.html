@@ -10,7 +10,6 @@
     <link rel = "stylesheet" href = "/css/style.css">
     <!-- Script import-->
     <script src = "./js/apiCall.js"></script> 
-    <script src = "./js/keyboardImage.js"></script>
     <!-- Axios Script -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
@@ -29,16 +28,16 @@
         <input type = "text" id = "inputName" name = "inputName" placeholder="George"  />
         <br>
         <label for="Keyboard Layout">Choose a Keyboard</label>
-        <select name = "keyboard" id = "keyboard">
+        <select class = "keyboard" name = "keyboard" id = "keyboard">
             <option value = "qwerty" selected>QWERTY</option>
             <option value = "ortho">ORTHOLINEAR</option>
+            <option value = "dvorak">DVORAK</option>
         </select>
         <br>
     </form>
-    <div> <!-- Keyboard image-->
-        <img id = "keyboardImage" src = "./images/1920px-KB_United_States.png">
+    <div class = "container"> <!-- Keyboard image-->
+        <img id = "keyboardImage" class = "img-fluid" src = "./images/1920px-KB_United_States.png">
     </div>
-    <br>
     <button type = "button" id = "apiCall" onclick = "nameDistanceCall(event)">
         apiCall
     </button>
@@ -59,5 +58,6 @@
             </table>
         </div>
     </div>
+    <script src = "./js/keyboardImage.js"></script>
 </body>
 </html>
