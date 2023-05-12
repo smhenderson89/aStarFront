@@ -1,0 +1,9 @@
+{
+  "name": "aStarFront",
+  "version": "1.0.0",
+  "description": "Name Distance Front End website",
+  "main": "index.js",
+  "repository": "https://github.com/smhenderson89/aStarFront.git",
+  "author": "Scott Henderson <scott.mc.henderson@gmail.com>",
+  "license": "MIT"
+}
