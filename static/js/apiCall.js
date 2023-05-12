@@ -7,7 +7,7 @@ function nameDistanceCall (event) {
   // If Issues, then break function and ask user to input a validName
   validName = checkName(name)
   if (!validName) {
-    console.log('not a valid name')
+    console.log('DEBUG: not a valid name')
     return 
   }
 
@@ -127,5 +127,5 @@ function checkName(name) {
     Return name for Api call
   */
 
-  return false
+  return true
 }
