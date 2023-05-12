@@ -11,13 +11,13 @@ keyboardSelect.addEventListener("change", (event) => {
     // console.log(`DEBUG: event triggered`)
     if (result == "ortho") {
         // console.log('change to ortho');
-        keyboardImage.src = "./images/ortho_cropped copy.png";
+        keyboardImage.src = "./static/images/orthoKeyboard.png";
     } else if (result == "qwerty") {
         // console.log('change to qwerty');
-        keyboardImage.src = "./images/1920px-KB_United_States.png";
+        keyboardImage.src = "./static/images/1920px-KB_United_States.png";
     } else if (result == "dvorak") {
         // console.log('change to dvorak');
-        keyboardImage.src = "./images/dvorak_layout.png";
+        keyboardImage.src = "./static/images/dvorak_layout.png";
     } else {
         // Do nothing
     }

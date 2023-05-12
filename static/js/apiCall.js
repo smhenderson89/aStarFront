@@ -1,7 +1,15 @@
 function nameDistanceCall (event) {
-  event.preventDefault()
+  event.preventDefault() // prevent form summition to new webpage
   let name = document.getElementById("inputName").value;
   let keyboard = document.getElementById("keyboard").value;
+
+  // Check Enter Name information for issues
+  // If Issues, then break function and ask user to input a validName
+  validName = checkName(name)
+  if (!validName) {
+    console.log('DEBUG: not a valid name')
+    return 
+  }
 
   // Disable api button until results found 
   let apiButton = document.getElementById("apiCall")
@@ -107,14 +115,17 @@ function showResults(info, keyboard, name) {
   row.append(col)
 }
 
-  // for (let j = 1; j < ((info.length) - 1); j++) {
-  //   box.appendChild(row)
-  //   col.innerHTML = info[j].start
-  //   box.appendChild(col)
-  //   col.innerHTML = info[j].end
-  //   box.appendChild(col)
-  //   col.innerHTML = info[j].distance 
-  //   box.appendChild(col)
-  //   col.innerHTML = info[j].path
-  //   box.appendChild(col)
-  // }
+function checkName(name) {
+  /*  If Name is Not Valid
+  - No name entered (blank)
+  - No valid alpha characters
+      Prevent submit for form
+  If Name has special characters/numbers
+    Skip white space or dash for form
+    Skip special characters if possible
+  If All Valid characters (use Regex)
+    Return name for Api call
+  */
+
+  return true
+}
