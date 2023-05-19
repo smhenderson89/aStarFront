@@ -1,0 +1,44 @@
+[
+    {
+        "name": "mary"
+    },
+    {
+        "start": "M",
+        "end": "A",
+        "distance": 7,
+        "path": [
+            "M",
+            "N",
+            "B",
+            "V",
+            "C",
+            "X",
+            "S",
+            "A"
+        ]
+    },
+    {
+        "start": "A",
+        "end": "R",
+        "distance": 3,
+        "path": [
+            "A",
+            "W",
+            "E",
+            "R"
+        ]
+    },
+    {
+        "start": "R",
+        "end": "Y",
+        "distance": 2,
+        "path": [
+            "R",
+            "T",
+            "Y"
+        ]
+    },
+    {
+        "totalDistance": 12
+    }
+]
