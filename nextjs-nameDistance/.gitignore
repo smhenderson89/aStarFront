@@ -17,6 +17,8 @@
 
 # misc
 .DS_Store
+./images/.DS_Store
+
 
 # debug
 npm-debug.log*
