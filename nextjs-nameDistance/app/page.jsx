@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Navbar from '../pages/layout/navbar';
+import Navbar from './layout/navbar';
 
 export default function Home() {
   return (
@@ -12,6 +12,7 @@ export default function Home() {
 
       <main>
         <h3>Name Distance Tech Demo</h3>
+        <div>Built with NextJS</div>
       </main>
 
       <footer>
